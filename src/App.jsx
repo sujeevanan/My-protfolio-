@@ -5,6 +5,7 @@ import About from "./Components/About";
 import Technologies from "./Components/Technologies";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
@@ -15,12 +16,16 @@ const App = () => {
         </div>
 
         <div className="container mx-auto px-8">
-          <Navbar />
-          <Hero />
-          <About />
-          <Technologies />
-          <Projects />
-          <Contact />
+          <Router>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Hero />} />
+              <Route path="/About" element={<About />} />
+              <Route path="/Technologies" element={<Technologies />} />
+              <Route path="/Projects" element={<Projects />} />
+              <Route path="/Contact" element={<Contact />} />
+            </Routes>
+          </Router>
         </div>
       </div>
     </>

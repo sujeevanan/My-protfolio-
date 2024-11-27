@@ -1,9 +1,9 @@
 import React from "react";
 import { HERO_CONTENT } from "../constants";
-import profilepic from "../assets/kevinRushProfile.png";
+
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
-import { FaSquareInstagram } from "react-icons/fa6";
+
 import { motion } from "framer-motion";
 
 const container = (delay) => ({
@@ -50,10 +50,14 @@ const Hero = () => {
             </motion.p>
             <div className="m-8 flex items-center justify-center gap-4 text-2xl ">
               <div className=" hover:cursor-pointer">
-                <FaLinkedin />
+                <a href="https://www.linkedin.com/in/sujeevanan-loganathan-101037222/">
+                  <FaLinkedin />
+                </a>
               </div>
               <div className=" hover:cursor-pointer">
-                <FaGithub />
+                <a href="https://github.com/sujeevanan?tab=overview&from=2024-02-01&to=2024-02-29">
+                  <FaGithub />
+                </a>
               </div>
             </div>
             <button className="border-neutral-300 border-2 p-2 rounded-lg">
